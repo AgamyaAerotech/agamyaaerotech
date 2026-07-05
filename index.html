@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     font-family: 'Montserrat', sans-serif;
@@ -25,7 +31,8 @@ header {
 }
 
 header img {
-    height:90px; /* INCREASED LOGO SIZE */
+    height:90px;
+    background:transparent; /* TRANSPARENT LOGO FIX */
 }
 
 nav a {
@@ -56,19 +63,9 @@ nav a:hover {
     font-size:42px;
 }
 
-.fade-text {
-    opacity:0;
-    animation:fadeIn 3s forwards;
-}
-
-@keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
-}
-
 /* SECTION */
 section {
-    padding:60px 20px;
+    padding:80px 20px;
     text-align:center;
 }
 
@@ -91,17 +88,16 @@ section {
     width:100%;
 }
 
-/* VISION MISSION UPDATED */
+/* VISION MISSION */
 .vm-container {
     display:flex;
     flex-wrap:wrap;
     gap:30px;
     justify-content:center;
-    margin-top:30px;
 }
 
 .vm-box {
-    background:#d9dde3;   /* GREY */
+    background:#d9dde3;
     color:#000;
     padding:25px;
     width:350px;
@@ -125,25 +121,12 @@ section {
     width:200px;
 }
 
-.footer a {
-    color:#ccc;
-    text-decoration:none;
-    font-size:14px;
-}
-
-.footer a:hover {
-    color:white;
-}
-
 .footer-bottom {
-    margin-top:30px;
-    border-top:1px solid #333;
-    padding-top:15px;
+    margin-top:20px;
     text-align:center;
-    font-size:13px;
 }
 
-/* FLOAT BUTTONS (CLEAN) */
+/* FLOAT BUTTONS */
 .email-btn, .wa-btn {
     position:fixed;
     right:20px;
@@ -151,18 +134,11 @@ section {
     color:#fff;
     text-decoration:none;
     border-radius:5px;
-    font-size:14px;
 }
 
-.email-btn {
-    bottom:80px;
-    background:#0073e6;
-}
+.email-btn { bottom:80px; background:#0073e6; }
+.wa-btn { bottom:30px; background:#25D366; }
 
-.wa-btn {
-    bottom:30px;
-    background:#25D366;
-}
 </style>
 </head>
 
@@ -170,22 +146,21 @@ section {
 
 <!-- HEADER -->
 <header>
-    <img src="NEW_LOGO1.png">
+    <img src="NEW_LOGO.png">
     <nav>
-    <a href="#">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#capability">Capabilities</a>
-    <a href="#contact">Contact Us</a>
-    <a href="#contact">Careers</a>
-    <a href="#capability">Offerings</a>
-</nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#vision">Vision</a>
+        <a href="#capability">Capabilities</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
     <div>
         <h1>Welcome to AGAMYA AEROTECH</h1>
-        <p class="fade-text">Engineering Precision. Delivering Excellence.</p>
+        <p>Engineering Precision. Delivering Excellence.</p>
     </div>
 </section>
 
@@ -196,7 +171,7 @@ section {
 </section>
 
 <!-- VISION & MISSION -->
-<section>
+<section id="vision">
 <h2>Vision & Mission</h2>
 
 <div class="vm-container">
@@ -227,19 +202,16 @@ To manufacture high-precision aerospace and automotive components by deploying d
 <div class="cap-card">
 <img src="milling.png">
 <h3>CNC Milling</h3>
-<p>High precision multi-axis machining</p>
 </div>
 
 <div class="cap-card">
 <img src="turning.png">
 <h3>CNC Turning</h3>
-<p>Accurate and efficient turning operations</p>
 </div>
 
 <div class="cap-card">
 <img src="edm.png">
 <h3>EDM</h3>
-<p>Wirecut and spark erosion for complex parts</p>
 </div>
 
 </div>
@@ -262,32 +234,29 @@ BENGALURU - 560091
 
 <!-- FOOTER -->
 <div class="footer">
-
 <div class="footer-container">
 
 <div class="footer-column">
-<p>Leading aerospace and automotive manufacturing solutions with precision engineering and quality excellence.</p>
+<p>Leading aerospace manufacturing solutions.</p>
 </div>
 
 <div class="footer-column">
 <h3>Company</h3>
-<p><a href="overview.html">Overview</a></p>
-<p><a href="leadership.html">Leadership</a></p>
-<p><a href="careers.html">Careers</a></p>
+<p>Overview</p>
+<p>Leadership</p>
+<p>Careers</p>
 </div>
 
 <div class="footer-column">
 <h3>Offerings</h3>
-<p><a href="aerospace.html">Aerospace Tooling</a></p>
-<p><a href="automotive.html">Automotive Components</a></p>
-<p><a href="manufacturing.html">Manufacturing</a></p>
+<p>Aerospace Tooling</p>
+<p>Automotive Components</p>
 </div>
 
 <div class="footer-column">
 <h3>Quick Links</h3>
-<p><a href="contact.html">Contact</a></p>
-<p><a href="enquiry.html">Enquiry</a></p>
-<p><a href="certifications.html">Certifications</a></p>
+<p>Contact</p>
+<p>Certifications</p>
 </div>
 
 </div>
@@ -295,7 +264,6 @@ BENGALURU - 560091
 <div class="footer-bottom">
 © 2026 AGAMYA AEROTECH
 </div>
-
 </div>
 
 <!-- BUTTONS -->
