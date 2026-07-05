@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AGAMYA AEROTECH</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,36 +13,32 @@
 body {
     margin:0;
     font-family: 'Montserrat', sans-serif;
-    background:#e5e7ea;
+    background:#e6e8eb;
     color:#222;
 }
 
-h2 {
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-/* NAVBAR */
+/* NAVBAR (LOGO FRIENDLY LIGHT BACKGROUND) */
 header {
     position:sticky;
     top:0;
-    background:#ffffff;
+    background:#ffffff; /* contrast for logo */
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:12px 50px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
     z-index:1000;
 }
 
 header img {
-    height:90px;
+    height:95px; /* bigger logo */
 }
 
+/* NAV */
 nav a {
-    margin:0 15px;
+    margin:0 18px;
     text-decoration:none;
-    color:#222;
+    color:#111;
     font-weight:500;
 }
 
@@ -53,7 +49,7 @@ nav a:hover {
 /* HERO */
 .hero {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('aerospace.png');
     background-size:cover;
     background-position:center;
@@ -70,12 +66,6 @@ nav a:hover {
 
 .hero p {
     font-size:18px;
-    animation:fadeIn 3s;
-}
-
-@keyframes fadeIn {
-    from {opacity:0;}
-    to {opacity:1;}
 }
 
 /* SECTION */
@@ -101,29 +91,7 @@ section {
 }
 
 .card:hover {
-    transform:translateY(-8px);
-}
-
-/* CAPABILITY */
-.card img {
-    width:100%;
-    border-radius:8px;
-}
-
-/* FORMS */
-form input, form textarea {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-}
-
-form button {
-    background:#0077cc;
-    color:white;
-    padding:12px;
-    border:none;
-    cursor:pointer;
+    transform:translateY(-6px);
 }
 
 /* FOOTER */
@@ -142,7 +110,7 @@ form button {
 .footer a {
     color:#bbb;
     display:block;
-    margin:5px 0;
+    margin:6px 0;
     text-decoration:none;
 }
 
@@ -159,6 +127,7 @@ form button {
     color:white;
     padding:15px;
     border-radius:50%;
+    text-decoration:none;
 }
 
 .emailbtn {
@@ -169,6 +138,7 @@ form button {
     color:white;
     padding:15px;
     border-radius:50%;
+    text-decoration:none;
 }
 
 </style>
@@ -182,7 +152,7 @@ form button {
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#capability">Capabilities</a>
-<a href="#contact">Contact</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
 
@@ -205,12 +175,16 @@ form button {
 
 <div class="card">
 <h3>Vision</h3>
-<p>To become a trusted global manufacturing solutions partner for aerospace and automotive industries.</p>
+<p>
+To become a trusted global manufacturing solutions partner for the aerospace and automotive industries, recognized for precision, compliance, and delivery excellence.
+</p>
 </div>
 
 <div class="card">
 <h3>Mission</h3>
-<p>To manufacture high-precision components ensuring quality, safety and delivery excellence.</p>
+<p>
+To manufacture high-precision aerospace and automotive components by deploying disciplined processes, skilled manpower, and compliant systems, ensuring safety, quality, cost competitiveness, and on-time delivery.
+</p>
 </div>
 
 </div>
@@ -239,30 +213,7 @@ form button {
 </div>
 </section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Message"></textarea>
-<button>Send Message</button>
-</form>
-
-</section>
-
-<section>
-<h2>Enquiry</h2>
-
-<form>
-<input type="text" placeholder="Company Name">
-<input type="text" placeholder="Requirement">
-<textarea placeholder="Details"></textarea>
-<button>Submit Enquiry</button>
-</form>
-
-</section>
-
+<!-- FOOTER -->
 <div class="footer">
 
 <div class="footer-grid">
@@ -282,7 +233,8 @@ form button {
 
 <div>
 <h3>Quick Links</h3>
-<a href="#contact">Contact</a>
+<a href="contact.html">Contact</a>
+<a href="enquiry.html">Enquiry</a>
 <a href="certifications.html">Certifications</a>
 </div>
 
@@ -290,6 +242,7 @@ form button {
 
 </div>
 
+<!-- FLOAT BUTTONS -->
 <a href="https://wa.me/918217792498" class="whatsapp">W</a>
 <a href="mailto:agamyaaero@gmail.com" class="emailbtn">@</a>
 
