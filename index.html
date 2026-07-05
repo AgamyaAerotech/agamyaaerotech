@@ -1,321 +1,278 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AGAMYA AEROTECH | The Art of Precision</title>
+<title>AGAMYA AEROTECH</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-html, body { height: 100%; }
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    color: #333;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background:#0b1c3d;
+    color:white;
 }
 
-/* SIDEBAR */
-.sidebar {
-    min-height: 100%;
-    width: 250px;
-    position: fixed;
-    background-color: #0f172a;
-    padding-top: 40px;
-    transition: 0.3s;
-    overflow-x: hidden;
-    z-index: 1000;
+/* HEADER */
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#08142b;
 }
 
-@media screen and (min-width: 769px) {
-    .sidebar { height: 100vh; top: 0; }
+header img {
+    height:60px;
 }
 
-.sidebar a, .dropdown-btn {
-    padding: 12px 20px;
-    font-size: 16px;
-    color: white;
-    display: block;
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
+nav a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-size:14px;
 }
 
-.sidebar a:hover, .dropdown-btn:hover {
-    background-color: #1e293b;
+nav a:hover {
+    color:#00bcd4;
 }
 
-.dropdown-container {
-    display: none;
-    background-color: #1e293b;
+/* HERO */
+.hero {
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url('aerospace.png');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
-.dropdown-container a {
-    padding-left: 40px;
-    font-size: 14px;
+.hero h1 {
+    font-size:42px;
 }
 
-/* MAIN */
-.main-content {
-    margin-left: 250px;
-    transition: 0.3s;
+.fade-text {
+    opacity:0;
+    animation:fadeIn 3s forwards;
 }
 
-.main-header {
-    background: #0f172a;
-    color: white;
-    padding: 15px 20px;
-    position: relative;
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
 }
 
-.hamburger {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-container img { height: 150px; }
-
-.header-container h2 {
-    letter-spacing: 4px;
-    font-size: 18px;
-    margin: 0;
-}
-
-/* SECTIONS */
+/* SECTION */
 section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.services, .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    width: 280px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-footer {
-    background: #0f172a;
-    color: white;
-    padding: 20px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #0f172a;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    padding:60px 20px;
+    text-align:center;
 }
 
 /* CAPABILITY */
-#capability {
-    background: #0b1c3d;
-    color: white;
+.capability {
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
 }
 
-.capability-container {
-    display: flex;
-    gap: 30px;
-    margin-top: 40px;
+.cap-card {
+    background:#132a57;
+    padding:20px;
+    width:300px;
+    border-radius:10px;
 }
-
-.cap-card { flex: 1; }
 
 .cap-card img {
-    width: 100%;
-    margin-bottom: 20px;
+    width:100%;
 }
 
-/* MOBILE */
-@media screen and (max-width: 768px) {
-    .sidebar {
-        left: -250px;
-        top: 0;
-        height: 100%;
-    }
-    .main-content { margin-left: 0; }
-    .capability-container { flex-direction: column; }
+/* VISION MISSION BOX */
+.vm-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.vm-box {
+    background:#132a57;
+    padding:25px;
+    width:350px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+.footer {
+    background:#0a0f1c;
+    padding:40px;
+}
+
+.footer-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-column {
+    width:200px;
+}
+
+.footer h3 {
+    margin-bottom:15px;
+}
+
+.footer p {
+    color:#ccc;
+    font-size:14px;
+}
+
+.footer-bottom {
+    margin-top:30px;
+    border-top:1px solid #333;
+    padding-top:15px;
+    text-align:center;
+    font-size:13px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="main-header">     <button class="hamburger" onclick="toggleSidebar()">☰</button>     <div class="header-container">         <img src="NEW_LOGO1.png" alt="Agamya Aerotech Logo">         <h2>AGAMYA AEROTECH</h2>     </div> </div>
+<!-- HEADER -->
+<header>
+    <img src="NEW_LOGO1.png">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#capability">Capabilities</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Offerings</a>
+    </nav>
+</header>
 
-<div class="sidebar" id="sidebar">
-    <a href="#home" onclick="closeSidebar()">Home</a>
-    <button class="dropdown-btn">About ▼</button>
-    <div class="dropdown-container">
-        <a href="#about" onclick="closeSidebar()">About Us</a>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Welcome to AGAMYA AEROTECH</h1>
+        <p class="fade-text">Engineering Precision. Delivering Excellence.</p>
     </div>
-    <button class="dropdown-btn">Services ▼</button>
-    <div class="dropdown-container">
-        <a href="#services" onclick="closeSidebar()">Our Services</a>
-        <a href="#capability" onclick="closeSidebar()">Capability</a>
-        <a href="#gallery" onclick="closeSidebar()">Gallery</a>
-    </div>
-    <a href="#contact" onclick="closeSidebar()">Contact</a>
-</div>
-
-<div class="main-content">
-
-<section id="home">
-    <h2>Welcome to <strong>AGAMYA AEROTECH</strong></h2>
-    <p>Your trusted partner in aerospace tooling, precision components, and automotive manufacturing.</p>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-    <h2>About Us</h2>
-    <p>
-        AGAMYA AEROTECH is a manufacturing partner specializing in aerospace tooling,
-        precision components, and automotive solutions.
-    </p>
+<h2>About Us</h2>
+<p>We specialize in aerospace and automotive precision manufacturing, tooling, and advanced engineering solutions.</p>
 </section>
 
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Aerospace Tooling</h3>
-            <p>Precision tooling solutions designed for aerospace industry standards.</p>
-        </div>
-        <div class="card">
-            <h3>Precision Components</h3>
-            <p>Advanced CNC machining and high-accuracy manufacturing solutions.</p>
-        </div>
-        <div class="card">
-            <h3>Automotive Manufacturing</h3>
-            <p>Reliable production support for automotive OEMs and Tier suppliers.</p>
-        </div>
-    </div>
+<!-- VISION & MISSION -->
+<section>
+<h2>Vision & Mission</h2>
+
+<div class="vm-container">
+
+<div class="vm-box">
+<h3>Vision</h3>
+<p>
+To become a trusted global manufacturing solutions partner for the aerospace and automotive industries, recognized for precision, compliance, and delivery excellence.
+</p>
+</div>
+
+<div class="vm-box">
+<h3>Mission</h3>
+<p>
+To manufacture high-precision aerospace and automotive components by deploying disciplined processes, skilled manpower, and compliant systems, ensuring safety, quality, cost competitiveness, and on-time delivery.
+</p>
+</div>
+
+</div>
 </section>
 
+<!-- CAPABILITIES -->
 <section id="capability">
-    <h2>Our Supply Chain Capability</h2>
-    <div class="capability-container">
+<h2>Capabilities</h2>
 
-```
-    <div class="cap-card">
-        <img src="milling.png">
-        <h3>CNC MILLING</h3>
-        <ul>
-            <li>Makino SLIM3-N with 4th Axis - 2 Machines</li>
-            <li>Makino SLIM3-N - 3 Axis - 2 Machines</li>
-            <li>HAAS VF-2 - 3 Axis - 3 Machines</li>
-            <li>HAAS VF-5 - 3 Axis - 2 Machines</li>
-            <li>HAAS VF-4 with 5th Axis - 2 Machines</li>
-        </ul>
-    </div>
+<div class="capability">
 
-    <div class="cap-card">
-        <img src="turning.png">
-        <h3>CNC TURNING</h3>
-        <ul>
-            <li>Conventional Turning - 4 Machines</li>
-            <li>CNC Turning - 10+ Machines</li>
-        </ul>
-    </div>
+<div class="cap-card">
+<img src="milling.png">
+<h3>CNC Milling</h3>
+<p>High precision multi-axis machining</p>
+</div>
 
-    <div class="cap-card">
-        <img src="edm.png">
-        <h3>WIRECUT & SPARKING</h3>
-        <p>Advanced Electrical Discharge Machining for complex precision work.</p>
-    </div>
+<div class="cap-card">
+<img src="turning.png">
+<h3>CNC Turning</h3>
+<p>Accurate and efficient turning operations</p>
+</div>
+
+<div class="cap-card">
+<img src="edm.png">
+<h3>EDM</h3>
+<p>Wirecut and spark erosion for complex parts</p>
+</div>
 
 </div>
-```
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>
+NO 154, 14TH CROSS, BYRAVESHWARA INDUSTRIAL ESTATE<br>
+ANDRAHALLI MAIN ROAD, VISHWANEEDAM POST<br>
+BENGALURU - 560091
+</p>
+
+<p>Email: agamyaaero@gmail.com</p>
+<p>Phone: +91-8217792498</p>
 
 </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-        <div class="card">
-            <img src="aerospace.png">
-            <p>Aerospace Machining</p>
-        </div>
-        <div class="card">
-            <img src="precision.png">
-            <p>Precision Engineering</p>
-        </div>
-        <div class="card">
-            <img src="automotive.png">
-            <p>Automotive Components</p>
-        </div>
-    </div>
-</section>
+<!-- FOOTER -->
+<div class="footer">
 
-<section id="contact">     <h2>Contact Us</h2>     <div class="contact-info">         <p><strong>Address:</strong><br>         No 154, 14th Cross, Byraveshwara Industrial Estate<br>         Andrahalli Main Road, Vishwaneedam Post<br>         Bengaluru - 560091</p>
+<div class="footer-container">
 
-    <p><strong>Email:</strong> agamyaaero@gmail.com</p>
-    <p><strong>Phone:</strong> +91-8217792498</p>
-    <a href="mailto:agamyaaero@gmail.com" class="btn">Send Email</a>
+<div class="footer-column">
+<p>Leading aerospace and automotive manufacturing solutions with precision engineering and quality excellence.</p>
 </div>
 
-</section>
+<div class="footer-column">
+<h3>Company</h3>
+<p>Overview</p>
+<p>Leadership</p>
+<p>Careers</p>
+</div>
 
-<footer>
-    <p>Copyright © 2026 AGAMYA AEROTECH</p>
-</footer>
+<div class="footer-column">
+<h3>Offerings</h3>
+<p>Aerospace Tooling</p>
+<p>Automotive Components</p>
+<p>Manufacturing</p>
+</div>
+
+<div class="footer-column">
+<h3>Quick Links</h3>
+<p>Contact</p>
+<p>Certifications</p>
+</div>
 
 </div>
 
-<script>
-var dropdown = document.getElementsByClassName("dropdown-btn");
-for (var i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-        var dropdownContent = this.nextElementSibling;
-        dropdownContent.style.display =
-        (dropdownContent.style.display === "block") ? "none" : "block";
-    });
-}
+<div class="footer-bottom">
+© 2026 AGAMYA AEROTECH
+</div>
 
-function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    sidebar.style.left =
-    (sidebar.style.left === "0px") ? "-250px" : "0px";
-}
-
-function closeSidebar() {
-    if(window.innerWidth <= 768) {
-        document.getElementById("sidebar").style.left = "-250px";
-    }
-}
-</script>
+</div>
 
 </body>
 </html>
