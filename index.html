@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AGAMYA AEROTECH</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -52,8 +54,10 @@ nav a:hover {
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
         url('aerospace.png');
+
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,6 +107,7 @@ section h2 {
     width: 300px;
     border-radius: 10px;
     box-sizing: border-box;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -141,6 +146,45 @@ section h2 {
 
 .vm-box h3 {
     margin-top: 0;
+}
+
+/* INHOUSE MACHINERIES */
+#machineries {
+    background: #0b1c3d;
+}
+
+.machinery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.machinery-card {
+    background: #d9dde3;
+    color: #000;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.machinery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.machinery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.machinery-card h3 {
+    margin-top: 15px;
 }
 
 /* SUPPLIERS */
@@ -238,6 +282,15 @@ section h2 {
     color: #0073e6;
 }
 
+/* FOOTER LOGO */
+.footer-logo {
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
 .footer-bottom {
     margin-top: 20px;
     padding-top: 20px;
@@ -311,6 +364,7 @@ section h2 {
     }
 
     .cap-card,
+    .machinery-card,
     .vm-box,
     .contact-box {
         width: 100%;
@@ -328,10 +382,15 @@ section h2 {
     .footer-column {
         width: 100%;
     }
+
+    .footer-logo {
+        width: 200px;
+    }
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -341,12 +400,25 @@ section h2 {
     <img src="Transparent Logo.png" alt="Agamya Aerotech Logo">
 
     <nav>
+
         <a href="#home">Home</a>
+
         <a href="#about">About Us</a>
+
         <a href="#vision">Vision</a>
+
         <a href="#capability">Capabilities</a>
-        <a href="#suppliers">Suppliers</a>
+
+        <a href="#machineries">Inhouse Machineries</a>
+
+        <!-- SUPPLIER PDF -->
+        <a href="Agamya_Aerotech_Supplier_Terms_and_Condition.pdf"
+           target="_blank">
+            Suppliers
+        </a>
+
         <a href="#contact">Contact</a>
+
     </nav>
 
 </header>
@@ -356,8 +428,13 @@ section h2 {
 <section id="home" class="hero">
 
     <div>
+
         <h1>Welcome to AGAMYA AEROTECH</h1>
-        <p>Engineering Precision. Delivering Excellence.</p>
+
+        <p>
+            Engineering Precision. Delivering Excellence.
+        </p>
+
     </div>
 
 </section>
@@ -425,7 +502,7 @@ section h2 {
         <!-- CNC MILLING -->
         <div class="cap-card">
 
-            <img src="milling.png" alt="CNC Milling">
+            <img src="M.png" alt="CNC Milling">
 
             <h3>CNC Milling</h3>
 
@@ -435,7 +512,7 @@ section h2 {
         <!-- CNC TURNING -->
         <div class="cap-card">
 
-            <img src="turning.png" alt="CNC Turning">
+            <img src="T.png" alt="CNC Turning">
 
             <h3>CNC Turning</h3>
 
@@ -445,17 +522,17 @@ section h2 {
         <!-- EDM -->
         <div class="cap-card">
 
-            <img src="edm.png" alt="EDM">
+            <img src="E.png" alt="EDM">
 
             <h3>EDM</h3>
 
         </div>
 
 
-        <!-- TOOLING -->
+        <!-- AEROSPACE TOOLING -->
         <div class="cap-card">
 
-            <img src="aerospace.png" alt="Aerospace Tooling">
+            <img src="A.png" alt="Aerospace Tooling">
 
             <h3>Aerospace Tooling</h3>
 
@@ -465,21 +542,61 @@ section h2 {
         <!-- PRECISION MANUFACTURING -->
         <div class="cap-card">
 
-            <img src="milling.png" alt="Precision Manufacturing">
+            <img src="P.png" alt="Precision Manufacturing">
 
             <h3>Precision Manufacturing</h3>
 
         </div>
 
 
-        <!-- ENGINEERING SOLUTIONS -->
-        <div class="cap-card">
+    </div>
 
-            <img src="turning.png" alt="Engineering Solutions">
+</section>
 
-            <h3>Engineering Solutions</h3>
+
+<!-- INHOUSE MACHINERIES -->
+<section id="machineries">
+
+    <h2>Inhouse Machineries</h2>
+
+    <div class="machinery-container">
+
+
+        <!-- CNC MILLING -->
+        <div class="machinery-card">
+
+            <img
+                src="milling.png"
+                alt="CNC Milling Machine">
+
+            <h3>CNC Milling</h3>
 
         </div>
+
+
+        <!-- EDM -->
+        <div class="machinery-card">
+
+            <img
+                src="edm.png"
+                alt="EDM Machines">
+
+            <h3>EDM – 2 Machines</h3>
+
+        </div>
+
+
+        <!-- WIRE CUT -->
+        <div class="machinery-card">
+
+            <img
+                src="edm.png"
+                alt="Wire Cut Machines">
+
+            <h3>Wire Cut (WC) – 4 Machines</h3>
+
+        </div>
+
 
     </div>
 
@@ -514,6 +631,12 @@ section h2 {
             <p>
                 Suppliers interested in partnering with Agamya Aerotech
                 may contact us for registration and business opportunities.
+            </p>
+
+            <p>
+                Please refer to our
+                <strong>Supplier Terms and Conditions</strong>
+                for further information.
             </p>
 
         </div>
@@ -566,15 +689,17 @@ section h2 {
 
             <p>
                 Email:<br>
+
                 <a href="mailto:agamyaaero@gmail.com">
                     agamyaaero@gmail.com
                 </a>
             </p>
 
             <p>
-                Website:<br>
-                <a href="https://agamyaaerotech.github.io/agamyaaerotech/" target="_blank">
-                    agamyaaerotech.github.io
+                Phone:<br>
+
+                <a href="tel:+918217792498">
+                    +91 82177 92498
                 </a>
             </p>
 
@@ -591,8 +716,13 @@ section h2 {
     <div class="footer-container">
 
 
-        <!-- COMPANY -->
+        <!-- COMPANY + LARGE LOGO -->
         <div class="footer-column">
+
+            <img
+                src="Transparent Logo.png"
+                alt="Agamya Aerotech Logo"
+                class="footer-logo">
 
             <h3>AGAMYA AEROTECH</h3>
 
@@ -610,12 +740,24 @@ section h2 {
             <h3>Quick Links</h3>
 
             <p>
+
                 <a href="#home">Home</a><br>
+
                 <a href="#about">About Us</a><br>
+
                 <a href="#vision">Vision</a><br>
+
                 <a href="#capability">Capabilities</a><br>
-                <a href="#suppliers">Suppliers</a><br>
+
+                <a href="#machineries">Inhouse Machineries</a><br>
+
+                <a href="Agamya_Aerotech_Supplier_Terms_and_Condition.pdf"
+                   target="_blank">
+                    Suppliers
+                </a><br>
+
                 <a href="#contact">Contact</a>
+
             </p>
 
         </div>
@@ -627,11 +769,19 @@ section h2 {
             <h3>Contact</h3>
 
             <p>
+
                 Bengaluru – 560091<br><br>
 
                 <a href="mailto:agamyaaero@gmail.com">
                     agamyaaero@gmail.com
                 </a>
+
+                <br><br>
+
+                <a href="tel:+918217792498">
+                    +91 82177 92498
+                </a>
+
             </p>
 
         </div>
@@ -653,7 +803,9 @@ section h2 {
 <a
     href="mailto:agamyaaero@gmail.com"
     class="email-btn">
+
     Email
+
 </a>
 
 
@@ -662,10 +814,11 @@ section h2 {
     href="https://wa.me/918217792498"
     class="wa-btn"
     target="_blank">
+
     WhatsApp
+
 </a>
 
 
 </body>
 </html>
-```
